@@ -1,0 +1,436 @@
+{
+  "experiment": "Phase E7 Multi-Seed Dynamic Traffic Robustness Benchmark",
+  "generated_at": "2026-09-03T19:32:58.047344+00:00",
+  "seeds_tested": [
+    42,
+    101,
+    7,
+    23,
+    88,
+    12,
+    99,
+    54,
+    31,
+    77
+  ],
+  "fixed_reference_scales": {
+    "t_ref_min": 11.96,
+    "d_ref_km": 11.49
+  },
+  "or_tools_baseline": {
+    "t0": {
+      "algorithm_name": "Google OR-Tools (Classical Reference)",
+      "routes": [
+        {
+          "vehicle_id": 1,
+          "customer_nodes": [
+            "rushikonda_beach",
+            "kailasagiri_hill",
+            "rk_beach",
+            "nad_junction"
+          ],
+          "full_path_nodes": [
+            "maddilapalem_junction",
+            "rushikonda_beach",
+            "kailasagiri_hill",
+            "rk_beach",
+            "nad_junction",
+            "maddilapalem_junction"
+          ],
+          "total_load_kg": 200.0,
+          "total_travel_time_min": 51.23,
+          "total_distance_km": 47.82,
+          "total_cost": 4.247,
+          "time_window_penalties": 0.0,
+          "exceeds_max_route_time": false,
+          "is_feasible": true
+        }
+      ],
+      "total_fleet_time_min": 51.23,
+      "total_fleet_distance_km": 47.82,
+      "total_fleet_cost": 4.247,
+      "unserved_customers": [],
+      "runtime_ms": 1007.41,
+      "is_feasible": true,
+      "status": "OPTIMAL",
+      "objective": {
+        "name": "normalized_weighted_travel_cost",
+        "formula": "0.7 * (T / 11.96 min) + 0.3 * (D / 11.49 km)",
+        "weights": {
+          "time": 0.7,
+          "distance": 0.3
+        },
+        "objective_value": 4.247,
+        "components": {
+          "travel_time_min": 51.23,
+          "distance_km": 47.82,
+          "t_ref_min": 11.96,
+          "d_ref_km": 11.49
+        }
+      }
+    },
+    "t1_old": {
+      "routes": [
+        {
+          "vehicle_id": 1,
+          "customer_nodes": [
+            "rushikonda_beach",
+            "kailasagiri_hill",
+            "rk_beach",
+            "nad_junction"
+          ],
+          "full_path_nodes": [
+            "maddilapalem_junction",
+            "rushikonda_beach",
+            "kailasagiri_hill",
+            "rk_beach",
+            "nad_junction",
+            "maddilapalem_junction"
+          ],
+          "total_load_kg": 200.0,
+          "total_travel_time_min": 68.49,
+          "total_distance_km": 47.82,
+          "total_cost": 5.2572
+        }
+      ],
+      "total_fleet_time_min": 68.49,
+      "total_fleet_distance_km": 47.82,
+      "total_fleet_cost": 5.2572,
+      "objective": {
+        "name": "normalized_weighted_travel_cost",
+        "formula": "0.7 * (T / 11.96 min) + 0.3 * (D / 11.49 km)",
+        "weights": {
+          "time": 0.7,
+          "distance": 0.3
+        },
+        "objective_value": 5.2572,
+        "components": {
+          "travel_time_min": 68.49,
+          "distance_km": 47.82,
+          "t_ref_min": 11.96,
+          "d_ref_km": 11.49
+        }
+      }
+    },
+    "t1_reopt": {
+      "algorithm_name": "Google OR-Tools (Classical Reference)",
+      "routes": [
+        {
+          "vehicle_id": 1,
+          "customer_nodes": [
+            "rk_beach",
+            "nad_junction",
+            "rushikonda_beach",
+            "kailasagiri_hill"
+          ],
+          "full_path_nodes": [
+            "maddilapalem_junction",
+            "rk_beach",
+            "nad_junction",
+            "rushikonda_beach",
+            "kailasagiri_hill",
+            "maddilapalem_junction"
+          ],
+          "total_load_kg": 200.0,
+          "total_travel_time_min": 60.76,
+          "total_distance_km": 52.69,
+          "total_cost": 4.9319,
+          "time_window_penalties": 0.0,
+          "exceeds_max_route_time": false,
+          "is_feasible": true
+        }
+      ],
+      "total_fleet_time_min": 60.76,
+      "total_fleet_distance_km": 52.69,
+      "total_fleet_cost": 4.9319,
+      "unserved_customers": [],
+      "runtime_ms": 1001.01,
+      "is_feasible": true,
+      "status": "OPTIMAL",
+      "objective": {
+        "name": "normalized_weighted_travel_cost",
+        "formula": "0.7 * (T / 11.96 min) + 0.3 * (D / 11.49 km)",
+        "weights": {
+          "time": 0.7,
+          "distance": 0.3
+        },
+        "objective_value": 4.9319,
+        "components": {
+          "travel_time_min": 60.76,
+          "distance_km": 52.69,
+          "t_ref_min": 11.96,
+          "d_ref_km": 11.49
+        }
+      }
+    },
+    "delay_avoided_min": 7.73,
+    "dist_added_km": 4.87,
+    "j_avoided": 0.3253
+  },
+  "qpso_records": [
+    {
+      "Seed": 42,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 72.7,
+      "T1_Runtime_ms": 74.11
+    },
+    {
+      "Seed": 101,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 73.57,
+      "T1_Runtime_ms": 72.22
+    },
+    {
+      "Seed": 7,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 71.85,
+      "T1_Runtime_ms": 83.77
+    },
+    {
+      "Seed": 23,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 72.38,
+      "T1_Runtime_ms": 70.49
+    },
+    {
+      "Seed": 88,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 73.78,
+      "T1_Runtime_ms": 74.3
+    },
+    {
+      "Seed": 12,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 71.84,
+      "T1_Runtime_ms": 74.51
+    },
+    {
+      "Seed": 99,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 73.77,
+      "T1_Runtime_ms": 73.49
+    },
+    {
+      "Seed": 54,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 72.66,
+      "T1_Runtime_ms": 73.93
+    },
+    {
+      "Seed": 31,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 72.98,
+      "T1_Runtime_ms": 71.98
+    },
+    {
+      "Seed": 77,
+      "T0_Time_min": 51.23,
+      "T0_Dist_km": 47.82,
+      "T0_J": 4.247,
+      "T0_Route": "rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction",
+      "T1_Old_Time_min": 68.49,
+      "T1_Old_J": 5.2572,
+      "T1_Reopt_Time_min": 60.76,
+      "T1_Reopt_Dist_km": 52.69,
+      "T1_Reopt_J": 4.9319,
+      "T1_Reopt_Route": "rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill",
+      "Route_Diverged": true,
+      "Delay_Avoided_min": 7.73,
+      "Pct_Delay_Reduction": 11.29,
+      "Dist_Added_km": 4.87,
+      "J_Avoided": 0.3253,
+      "Feasible": true,
+      "T0_Runtime_ms": 74.19,
+      "T1_Runtime_ms": 72.71
+    }
+  ],
+  "statistical_summary": {
+    "Metric": [
+      "T0 Baseline Objective (J)",
+      "T0 Baseline Fleet Time (min)",
+      "T1 Inaction Objective (J)",
+      "T1 Inaction Fleet Time (min)",
+      "T1 Reoptimized Objective (J)",
+      "T1 Reoptimized Fleet Time (min)",
+      "Delay Avoided (min)",
+      "Delay Reduction (%)",
+      "Distance Added (km)",
+      "Feasibility Rate (%)",
+      "Route Divergence Rate (%)"
+    ],
+    "OR-Tools": [
+      "4.2470",
+      "51.23",
+      "5.2572",
+      "68.49",
+      "4.9319",
+      "60.76",
+      "7.73",
+      "11.29%",
+      "+4.87",
+      "100.0%",
+      "100.0%"
+    ],
+    "QPSO Mean \u00b1 Std": [
+      "4.2470 \u00b1 0.0000",
+      "51.23 \u00b1 0.00",
+      "5.2572 \u00b1 0.0000",
+      "68.49 \u00b1 0.00",
+      "4.9319 \u00b1 0.0000",
+      "60.76 \u00b1 0.00",
+      "7.73 \u00b1 0.00",
+      "11.29% \u00b1 0.00%",
+      "+4.87 \u00b1 0.00",
+      "100.0%",
+      "100.0%"
+    ],
+    "QPSO [Min, Max]": [
+      "[4.2470, 4.2470]",
+      "[51.23, 51.23]",
+      "[5.2572, 5.2572]",
+      "[68.49, 68.49]",
+      "[4.9319, 4.9319]",
+      "[60.76, 60.76]",
+      "[7.73, 7.73]",
+      "[11.29%, 11.29%]",
+      "[4.87, 4.87]",
+      "[100%, 100%]",
+      "[100%, 100%]"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+State,Google OR-Tools (1s Guided Local Search),"Random-Key QPSO (Seed 42, P=40, I=50)"
+1. T0 Baseline Plan,J=4.2470 | T=51.23m | D=47.82km,J=4.2470 | T=51.23m | D=47.82km
+2. T0 Plan Evaluated Under T1 (Inaction),J=5.2572 | T=68.49m | D=47.82km,J=5.2572 | T=68.49m | D=47.82km
+3. Reoptimized Under T1 Traffic,J=4.9319 | T=60.76m | D=52.69km,J=4.9319 | T=60.76m | D=52.69km
+4. Operational Value (Avoided Cost),Delta_T=-7.73m (11.3%) | Delta_D=+4.87km | Delta_J=-0.3253,Delta_T=-7.73m (11.3%) | Delta_D=+4.87km | Delta_J=-0.3253
