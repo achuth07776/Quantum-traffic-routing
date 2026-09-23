@@ -1,0 +1,51 @@
+{
+  "artifact_type": "CONTROLLED_TRAFFIC_SHOCK_EXPERIMENT",
+  "provenance_classification": "CONTROLLED SIMULATION ON REAL ROAD NETWORK",
+  "generated_at": "2026-09-04T01:06:00Z",
+  "experiment_id": "EXP-E7-CONTROLLED-BEACH-RD-3X",
+  "target_network": {
+    "city": "Visakhapatnam, Andhra Pradesh, India",
+    "routing_engine": "OSRM HTTP Routing Engine",
+    "road_network_source": "OpenStreetMap Real Road Network Geometry",
+    "depot": "maddilapalem_junction",
+    "customers": ["rk_beach", "rushikonda_beach", "kailasagiri_hill", "nad_junction"]
+  },
+  "controlled_shock_specification": {
+    "target_corridor_id": "beach_road",
+    "corridor_display_name": "Beach Road (RK Beach to Rushikonda)",
+    "simulated_incident_multiplier": 3.0,
+    "effective_speed_kmh": 16.0,
+    "free_flow_speed_kmh": 50.0,
+    "segment_length_km": 10.57,
+    "free_flow_duration_min": 10.9,
+    "shocked_duration_min": 34.5,
+    "corridor_delay_added_min": 23.6
+  },
+  "counterfactual_reoptimization_evaluation": {
+    "baseline_t0_plan": {
+      "route": ["maddilapalem_junction", "rushikonda_beach", "kailasagiri_hill", "rk_beach", "nad_junction", "maddilapalem_junction"],
+      "fleet_travel_time_min": 51.23,
+      "fleet_distance_km": 47.82,
+      "composite_j": 4.2470
+    },
+    "inaction_pre_shock_plan_under_traffic": {
+      "route": ["maddilapalem_junction", "rushikonda_beach", "kailasagiri_hill", "rk_beach", "nad_junction", "maddilapalem_junction"],
+      "fleet_travel_time_min": 68.49,
+      "fleet_distance_km": 47.82,
+      "composite_j": 5.2572
+    },
+    "reoptimized_plan": {
+      "route": ["maddilapalem_junction", "rk_beach", "nad_junction", "rushikonda_beach", "kailasagiri_hill", "maddilapalem_junction"],
+      "fleet_travel_time_min": 60.76,
+      "fleet_distance_km": 52.69,
+      "composite_j": 4.9319
+    },
+    "operational_metrics": {
+      "congestion_delay_avoided_min": 7.73,
+      "pct_delay_reduction_relative_to_inaction": 11.29,
+      "distance_added_km": 4.87,
+      "composite_j_avoided": 0.3253,
+      "decision_explanation": "The reoptimized fleet plan avoided 7.73 minutes of congestion delay compared with leaving the pre-shock plan unchanged, accepting +4.87 km of additional road distance to circumvent the congested Beach Road corridor."
+    }
+  }
+}
