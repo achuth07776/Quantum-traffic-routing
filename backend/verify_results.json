@@ -1,0 +1,265 @@
+{
+  "item1_bogus": {
+    "status": 400,
+    "body": {
+      "detail": "Graph 'bogus_graph_does_not_exist' not found"
+    }
+  },
+  "item1_ok": {
+    "status": "SUCCESS",
+    "graph_id": "visakhapatnam_network",
+    "origin_node": "1",
+    "destination_node": "6",
+    "baseline_algorithm": "dijkstra",
+    "results": {
+      "dijkstra": {
+        "algorithm_name": "Dijkstra (Baseline)",
+        "path": [
+          "1",
+          "13",
+          "5",
+          "6"
+        ],
+        "distance_km": 10.2,
+        "travel_time_min": 10.93,
+        "cost": 8.623,
+        "emissions_g": 1224.0,
+        "runtime_ms": 0.104,
+        "iterations": 9,
+        "convergence_curve": [
+          8.623
+        ],
+        "is_feasible": true,
+        "path_geojson": {
+          "type": "Feature",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                83.3341,
+                17.7144
+              ],
+              [
+                83.3235,
+                17.7265
+              ],
+              [
+                83.3235,
+                17.7265
+              ],
+              [
+                83.3412,
+                17.7441
+              ],
+              [
+                83.3412,
+                17.7441
+              ],
+              [
+                83.3854,
+                17.7818
+              ]
+            ]
+          },
+          "properties": {
+            "path_nodes": [
+              "1",
+              "13",
+              "5",
+              "6"
+            ]
+          }
+        },
+        "metadata": {
+          "nodes_explored": 12
+        }
+      },
+      "astar": {
+        "algorithm_name": "A* (Travel-Time Baseline)",
+        "path": [
+          "1",
+          "13",
+          "5",
+          "6"
+        ],
+        "distance_km": 10.2,
+        "travel_time_min": 10.93,
+        "cost": 8.623,
+        "emissions_g": 1224.0,
+        "runtime_ms": 0.064,
+        "iterations": 6,
+        "convergence_curve": [
+          8.623
+        ],
+        "is_feasible": true,
+        "path_geojson": {
+          "type": "Feature",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                83.3341,
+                17.7144
+              ],
+              [
+                83.3235,
+                17.7265
+              ],
+              [
+                83.3235,
+                17.7265
+              ],
+              [
+                83.3412,
+                17.7441
+              ],
+              [
+                83.3412,
+                17.7441
+              ],
+              [
+                83.3854,
+                17.7818
+              ]
+            ]
+          },
+          "properties": {
+            "path_nodes": [
+              "1",
+              "13",
+              "5",
+              "6"
+            ]
+          }
+        },
+        "metadata": {
+          "nodes_explored": 8
+        }
+      }
+    },
+    "improvements": {
+      "astar": {
+        "travel_time_improvement_pct": 0.0,
+        "composite_cost_improvement_pct": 0.0,
+        "emissions_reduction_pct": 0.0
+      }
+    },
+    "provenance": {
+      "road_network": "REAL DATA (OSM Visakhapatnam)",
+      "traffic": "SIMULATED (BPR Non-Linear Engine)",
+      "cost": "DERIVED",
+      "optimization": "OPTIMIZATION RESULT",
+      "emissions": "ESTIMATED"
+    },
+    "timestamp": "2026-09-09T04:39:17.821982+00:00"
+  },
+  "item2_oversized": {
+    "status": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "less_than_equal",
+          "loc": [
+            "body",
+            "num_variables"
+          ],
+          "msg": "Input should be less than or equal to 20",
+          "input": 100,
+          "ctx": {
+            "le": 20
+          }
+        }
+      ]
+    }
+  },
+  "item2_mismatch": {
+    "status": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "value_error",
+          "loc": [
+            "body"
+          ],
+          "msg": "Value error, q_matrix must be 4x4 (matching num_variables=4); got 5x4",
+          "input": {
+            "num_variables": 4,
+            "variable_labels": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ],
+            "q_matrix": [
+              [
+                -5.0,
+                20.0,
+                15.0,
+                0.0
+              ],
+              [
+                0.0,
+                -2.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -4.0,
+                20.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "p_layers": 2
+          },
+          "ctx": {
+            "error": {}
+          }
+        }
+      ]
+    }
+  },
+  "item2_valid": {
+    "status": "SUCCESS",
+    "optimal_bitstring": "1010",
+    "optimal_state_label": "Ambulance_Bypass + FireTruck_Bypass",
+    "optimal_cost": -3.0,
+    "ground_state_energy": -6.0,
+    "qaoa_layers": 2,
+    "optimal_gamma": [
+      0.3936,
+      0.2068
+    ],
+    "optimal_beta": [
+      0.9262,
+      -0.1174
+    ],
+    "state_probabilities": {
+      "1010": 0.3193,
+      "1000": 0.1943,
+      "0010": 0.1043,
+      "0110": 0.0815,
+      "1001": 0.0754,
+      "0000": 0.0647,
+      "0100": 0.054,
+      "0101": 0.0459
+    },
+    "quantum_circuit_qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[4];\ncreg c[4];\n// Step 1: Initialize uniform superposition |+>^n\nh q[0];\nh q[1];\nh q[2];\nh q[3];\n// Layer 1: Problem Unitary U(C, gamma_1=0.394)\nrz(-4.9194) q[0];\nrz(-3.1484) q[1];\nrz(-5.3130) q[2];\nrz(-3.5420) q[3];\ncx q[0],q[1];\nrz(3.9355) q[1];\ncx q[0],q[1];\ncx q[0],q[2];\nrz(2.9517) q[2];\ncx q[0],q[2];\ncx q[2],q[3];\nrz(3.9355) q[3];\ncx q[2],q[3];\n// Layer 1: Mixer Unitary U(M, beta_1=0.926)\nrx(1.8524) q[0];\nrx(1.8524) q[1];\nrx(1.8524) q[2];\nrx(1.8524) q[3];\n// Layer 2: Problem Unitary U(C, gamma_2=0.207)\nrz(-2.5845) q[0];\nrz(-1.6541) q[1];\nrz(-2.7913) q[2];\nrz(-1.8608) q[3];\ncx q[0],q[1];\nrz(2.0676) q[1];\ncx q[0],q[1];\ncx q[0],q[2];\nrz(1.5507) q[2];\ncx q[0],q[2];\ncx q[2],q[3];\nrz(2.0676) q[3];\ncx q[2],q[3];\n// Layer 2: Mixer Unitary U(M, beta_2=-0.117)\nrx(-0.2349) q[0];\nrx(-0.2349) q[1];\nrx(-0.2349) q[2];\nrx(-0.2349) q[3];\n// Final Measurement\nmeasure q[0] -> c[0];\nmeasure q[1] -> c[1];\nmeasure q[2] -> c[2];\nmeasure q[3] -> c[3];",
+    "circuit_depth": 53,
+    "qubit_count": 4,
+    "runtime_ms": 660.83,
+    "is_converged": true
+  }
+}
