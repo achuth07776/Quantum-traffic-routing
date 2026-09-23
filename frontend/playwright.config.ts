@@ -1,0 +1,24 @@
+import { defineConfig } from '@playwright/test';
+
+export default defineConfig({
+  testDir: './tests/e2e',
+  timeout: 60000,
+  expect: {
+    timeout: 15000
+  },
+  fullyParallel: false,
+  retries: 0,
+  workers: 1,
+  use: {
+    baseURL: 'http://localhost:5173',
+    trace: 'off',
+    screenshot: 'only-on-failure',
+    headless: true,
+  },
+  webServer: {
+    command: 'npm run dev',
+    port: 5173,
+    reuseExistingServer: true,
+    timeout: 30000,
+  },
+});
