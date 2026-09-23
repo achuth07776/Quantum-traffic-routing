@@ -1,0 +1,5 @@
+num_customers,num_vehicles,num_trials,paired_feasible_trials,qpso_mean_cost_paired,qpso_std_cost_paired,memetic_mean_cost_paired,memetic_std_cost_paired,mean_improvement_pct_vs_qpso,wins_count,losses_count,ties_count,qpso_mean_time_min,memetic_mean_time_min,qpso_mean_runtime_ms,memetic_mean_runtime_ms,memetic_vs_qpso_runtime_ratio,qpso_feasibility_pct,memetic_feasibility_pct
+8,2,5,2,32.6395,1.2265,32.6395,1.2265,0.0,0,0,2,148.7,140.0,157.16,413.59,2.63,40.0,40.0
+12,3,5,2,50.4485,2.1775,48.984,0.906,2.8,2,0,0,227.79,201.03,213.61,877.38,4.11,40.0,40.0
+16,4,5,1,87.994,0.0,62.645,0.0,28.81,1,0,0,299.6,318.08,286.19,2810.57,9.82,20.0,20.0
+20,5,5,1,108.768,0.0,84.099,0.0,22.68,1,0,0,401.05,369.36,701.04,8455.36,12.06,20.0,20.0
