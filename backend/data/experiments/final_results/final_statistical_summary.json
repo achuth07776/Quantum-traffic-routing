@@ -1,0 +1,536 @@
+{
+  "vrp_exact_summary": [
+    {
+      "problem_size": 4,
+      "exact_optimal_cost": 18.524,
+      "exact_travel_time_min": 62.98,
+      "greedy_mean_cost": 19.704,
+      "greedy_mean_gap_pct": 6.37,
+      "greedy_mean_runtime_ms": 1.56,
+      "qpso_mean_cost": 18.524,
+      "qpso_mean_gap_pct": 0.0,
+      "qpso_mean_runtime_ms": 277.07,
+      "qpso_feasibility_pct": 100.0,
+      "num_trials": 10
+    },
+    {
+      "problem_size": 5,
+      "exact_optimal_cost": 27.806,
+      "exact_travel_time_min": 84.66,
+      "greedy_mean_cost": 28.986,
+      "greedy_mean_gap_pct": 4.24,
+      "greedy_mean_runtime_ms": 1.94,
+      "qpso_mean_cost": 27.806,
+      "qpso_mean_gap_pct": 0.0,
+      "qpso_mean_runtime_ms": 180.15,
+      "qpso_feasibility_pct": 100.0,
+      "num_trials": 10
+    },
+    {
+      "problem_size": 6,
+      "exact_optimal_cost": 43.458,
+      "exact_travel_time_min": 115.93,
+      "greedy_mean_cost": 44.638,
+      "greedy_mean_gap_pct": 2.72,
+      "greedy_mean_runtime_ms": 3.12,
+      "qpso_mean_cost": 43.458,
+      "qpso_mean_gap_pct": 0.0,
+      "qpso_mean_runtime_ms": 203.52,
+      "qpso_feasibility_pct": 100.0,
+      "num_trials": 10
+    }
+  ],
+  "vrp_scalability_summary": [
+    {
+      "num_customers": 8,
+      "num_vehicles": 2,
+      "greedy_mean_cost_all_trials": 33.128,
+      "greedy_mean_cost_paired_subset": 35.421,
+      "greedy_mean_time_all_trials": 142.86,
+      "greedy_mean_runtime_ms": 14.27,
+      "qpso_mean_cost_feasible_subset": 33.253,
+      "qpso_std_cost_feasible_subset": 1.062,
+      "qpso_mean_time_feasible_subset": 150.45,
+      "qpso_mean_runtime_ms": 230.16,
+      "mean_paired_cost_delta_pct": 5.86,
+      "mean_paired_time_delta_pct": 8.17,
+      "runtime_ratio": 16.1,
+      "feasibility_rate_pct": 40.0,
+      "num_trials": 10,
+      "status_note": "BUDGET LIMITED (40.0% feasible)"
+    },
+    {
+      "num_customers": 12,
+      "num_vehicles": 3,
+      "greedy_mean_cost_all_trials": 46.836,
+      "greedy_mean_cost_paired_subset": 50.699,
+      "greedy_mean_time_all_trials": 206.56,
+      "greedy_mean_runtime_ms": 23.79,
+      "qpso_mean_cost_feasible_subset": 52.783,
+      "qpso_std_cost_feasible_subset": 4.083,
+      "qpso_mean_time_feasible_subset": 216.61,
+      "qpso_mean_runtime_ms": 240.43,
+      "mean_paired_cost_delta_pct": -4.66,
+      "mean_paired_time_delta_pct": 3.95,
+      "runtime_ratio": 10.1,
+      "feasibility_rate_pct": 60.0,
+      "num_trials": 10,
+      "status_note": "BUDGET LIMITED (60.0% feasible)"
+    },
+    {
+      "num_customers": 16,
+      "num_vehicles": 4,
+      "greedy_mean_cost_all_trials": 68.672,
+      "greedy_mean_cost_paired_subset": 72.621,
+      "greedy_mean_time_all_trials": 282.09,
+      "greedy_mean_runtime_ms": 47.09,
+      "qpso_mean_cost_feasible_subset": 73.824,
+      "qpso_std_cost_feasible_subset": 1.435,
+      "qpso_mean_time_feasible_subset": 311.03,
+      "qpso_mean_runtime_ms": 328.02,
+      "mean_paired_cost_delta_pct": -1.66,
+      "mean_paired_time_delta_pct": 3.88,
+      "runtime_ratio": 7.0,
+      "feasibility_rate_pct": 20.0,
+      "num_trials": 10,
+      "status_note": "BUDGET LIMITED (20.0% feasible)"
+    }
+  ],
+  "dynamic_traffic_summary": [
+    {
+      "scenario_id": "NORMAL_FLOW",
+      "scenario_name": "1. Free Flow Baseline (Coastal Corridor Dominant)",
+      "origin": "1",
+      "destination": "6",
+      "pre_shock_route": "1 -> 13 -> 5 -> 6",
+      "pre_shock_time_min": 10.93,
+      "pre_shock_cost": 8.623,
+      "shock_astar_route": "1 -> 13 -> 5 -> 6",
+      "shock_astar_time_min": 10.93,
+      "shock_astar_cost": 8.623,
+      "shock_qpso_route": "1 -> 13 -> 5 -> 6",
+      "shock_qpso_time_min": 10.93,
+      "shock_qpso_cost": 8.623,
+      "route_diverted_around_shock": false,
+      "route_overlap_pct": 100.0,
+      "route_change_pct": 0.0,
+      "alternative_feasible_route_available": true,
+      "qpso_feasible": true,
+      "qpso_runtime_ms": 166.332
+    },
+    {
+      "scenario_id": "RUSHIKONDA_LANDSLIDE",
+      "scenario_name": "2. Coastal Expressway Landslide (5->6 Closed -> Divert to Simhachalam Bypass)",
+      "origin": "1",
+      "destination": "6",
+      "pre_shock_route": "1 -> 13 -> 5 -> 6",
+      "pre_shock_time_min": 10.93,
+      "pre_shock_cost": 8.623,
+      "shock_astar_route": "1 -> 13 -> 4 -> 11 -> 6",
+      "shock_astar_time_min": 23.9,
+      "shock_astar_cost": 18.16,
+      "shock_qpso_route": "1 -> 13 -> 4 -> 11 -> 6",
+      "shock_qpso_time_min": 23.9,
+      "shock_qpso_cost": 18.16,
+      "route_diverted_around_shock": true,
+      "route_overlap_pct": 16.7,
+      "route_change_pct": 83.3,
+      "alternative_feasible_route_available": true,
+      "qpso_feasible": true,
+      "qpso_runtime_ms": 175.262
+    },
+    {
+      "scenario_id": "MADDILAPALEM_FLOOD_AND_CLOSURE",
+      "scenario_name": "3. Maddilapalem Waterlogging (Moderate 3.5x Delay)",
+      "origin": "1",
+      "destination": "6",
+      "pre_shock_route": "1 -> 13 -> 5 -> 6",
+      "pre_shock_time_min": 10.93,
+      "pre_shock_cost": 8.623,
+      "shock_astar_route": "1 -> 13 -> 5 -> 6",
+      "shock_astar_time_min": 10.93,
+      "shock_astar_cost": 8.623,
+      "shock_qpso_route": "1 -> 13 -> 5 -> 6",
+      "shock_qpso_time_min": 10.93,
+      "shock_qpso_cost": 8.623,
+      "route_diverted_around_shock": false,
+      "route_overlap_pct": 100.0,
+      "route_change_pct": 0.0,
+      "alternative_feasible_route_available": true,
+      "qpso_feasible": true,
+      "qpso_runtime_ms": 152.693
+    },
+    {
+      "scenario_id": "PORT_CONTAINER_FREIGHT_SPIKE",
+      "scenario_name": "4. Port Corridor Freight Spike (9->3 3.5x Delay -> Alternative Port Route)",
+      "origin": "9",
+      "destination": "7",
+      "pre_shock_route": "9 -> 3 -> 10 -> 7",
+      "pre_shock_time_min": 17.0,
+      "pre_shock_cost": 13.122,
+      "shock_astar_route": "9 -> 14 -> 8 -> 7",
+      "shock_astar_time_min": 19.49,
+      "shock_astar_cost": 14.866,
+      "shock_qpso_route": "9 -> 14 -> 8 -> 7",
+      "shock_qpso_time_min": 19.49,
+      "shock_qpso_cost": 14.866,
+      "route_diverted_around_shock": true,
+      "route_overlap_pct": 0.0,
+      "route_change_pct": 100.0,
+      "alternative_feasible_route_available": true,
+      "qpso_feasible": true,
+      "qpso_runtime_ms": 152.81
+    },
+    {
+      "scenario_id": "TOTAL_RUSHIKONDA_ISOLATION",
+      "scenario_name": "5. Total Destination Isolation (All Inbound Links Closed -> True Failure Test)",
+      "origin": "1",
+      "destination": "6",
+      "pre_shock_route": "1 -> 13 -> 5 -> 6",
+      "pre_shock_time_min": 10.93,
+      "pre_shock_cost": 8.623,
+      "shock_astar_route": "NO FEASIBLE ROUTE",
+      "shock_astar_time_min": "Infinity",
+      "shock_astar_cost": "Infinity",
+      "shock_qpso_route": "NO FEASIBLE ROUTE",
+      "shock_qpso_time_min": "Infinity",
+      "shock_qpso_cost": "Infinity",
+      "route_diverted_around_shock": false,
+      "route_overlap_pct": 0.0,
+      "route_change_pct": 0.0,
+      "alternative_feasible_route_available": false,
+      "qpso_feasible": false,
+      "qpso_runtime_ms": 234.894
+    }
+  ],
+  "scalability_summary": [
+    {
+      "graph_nodes": 15,
+      "graph_edges": 40,
+      "dijkstra_runtime_ms": 0.164,
+      "dijkstra_cost": 8.623,
+      "astar_runtime_ms": 0.131,
+      "astar_time_min": 10.93,
+      "qpso_runtime_ms": 119.561,
+      "qpso_cost": 8.623,
+      "qpso_feasible": true,
+      "status_note": "FEASIBLE"
+    },
+    {
+      "graph_nodes": 50,
+      "graph_edges": 182,
+      "dijkstra_runtime_ms": 0.41,
+      "dijkstra_cost": 11.7,
+      "astar_runtime_ms": 0.325,
+      "astar_time_min": 15.79,
+      "qpso_runtime_ms": 235.272,
+      "qpso_cost": 12.135,
+      "qpso_feasible": true,
+      "status_note": "FEASIBLE"
+    },
+    {
+      "graph_nodes": 100,
+      "graph_edges": 356,
+      "dijkstra_runtime_ms": 1.386,
+      "dijkstra_cost": 27.083,
+      "astar_runtime_ms": 1.211,
+      "astar_time_min": 34.18,
+      "qpso_runtime_ms": 502.938,
+      "qpso_cost": 33.248,
+      "qpso_feasible": true,
+      "status_note": "FEASIBLE"
+    },
+    {
+      "graph_nodes": 250,
+      "graph_edges": 936,
+      "dijkstra_runtime_ms": 3.493,
+      "dijkstra_cost": 32.735,
+      "astar_runtime_ms": 4.237,
+      "astar_time_min": 43.26,
+      "qpso_runtime_ms": 433.386,
+      "qpso_cost": 38.457,
+      "qpso_feasible": true,
+      "status_note": "FEASIBLE"
+    },
+    {
+      "graph_nodes": 500,
+      "graph_edges": 1860,
+      "dijkstra_runtime_ms": 18.722,
+      "dijkstra_cost": 50.979,
+      "astar_runtime_ms": 12.487,
+      "astar_time_min": 67.57,
+      "qpso_runtime_ms": 526.501,
+      "qpso_cost": "Infinity",
+      "qpso_feasible": false,
+      "status_note": "INFEASIBLE (20p x 30i Limit)"
+    }
+  ],
+  "parameter_sensitivity_summary": [
+    {
+      "population_particles": 10,
+      "iteration_budget": 15,
+      "is_feasible": false,
+      "cost": "Infinity",
+      "travel_time_min": "Infinity",
+      "runtime_ms": 97.07
+    },
+    {
+      "population_particles": 10,
+      "iteration_budget": 30,
+      "is_feasible": true,
+      "cost": 112.729,
+      "travel_time_min": 145.73,
+      "runtime_ms": 215.034
+    },
+    {
+      "population_particles": 10,
+      "iteration_budget": 50,
+      "is_feasible": true,
+      "cost": 112.729,
+      "travel_time_min": 145.73,
+      "runtime_ms": 438.119
+    },
+    {
+      "population_particles": 10,
+      "iteration_budget": 100,
+      "is_feasible": true,
+      "cost": 95.878,
+      "travel_time_min": 125.79,
+      "runtime_ms": 807.972
+    },
+    {
+      "population_particles": 20,
+      "iteration_budget": 15,
+      "is_feasible": true,
+      "cost": 150.422,
+      "travel_time_min": 194.29,
+      "runtime_ms": 256.321
+    },
+    {
+      "population_particles": 20,
+      "iteration_budget": 30,
+      "is_feasible": false,
+      "cost": "Infinity",
+      "travel_time_min": "Infinity",
+      "runtime_ms": 435.072
+    },
+    {
+      "population_particles": 20,
+      "iteration_budget": 50,
+      "is_feasible": true,
+      "cost": 125.241,
+      "travel_time_min": 163.3,
+      "runtime_ms": 771.105
+    },
+    {
+      "population_particles": 20,
+      "iteration_budget": 100,
+      "is_feasible": true,
+      "cost": 87.781,
+      "travel_time_min": 113.65,
+      "runtime_ms": 1705.463
+    },
+    {
+      "population_particles": 30,
+      "iteration_budget": 15,
+      "is_feasible": false,
+      "cost": "Infinity",
+      "travel_time_min": "Infinity",
+      "runtime_ms": 305.196
+    },
+    {
+      "population_particles": 30,
+      "iteration_budget": 30,
+      "is_feasible": true,
+      "cost": 289.12,
+      "travel_time_min": 378.7,
+      "runtime_ms": 789.408
+    },
+    {
+      "population_particles": 30,
+      "iteration_budget": 50,
+      "is_feasible": true,
+      "cost": 84.559,
+      "travel_time_min": 108.79,
+      "runtime_ms": 1091.191
+    },
+    {
+      "population_particles": 30,
+      "iteration_budget": 100,
+      "is_feasible": true,
+      "cost": 70.121,
+      "travel_time_min": 90.5,
+      "runtime_ms": 2197.439
+    },
+    {
+      "population_particles": 50,
+      "iteration_budget": 15,
+      "is_feasible": true,
+      "cost": 74.513,
+      "travel_time_min": 97.0,
+      "runtime_ms": 637.328
+    },
+    {
+      "population_particles": 50,
+      "iteration_budget": 30,
+      "is_feasible": true,
+      "cost": 74.513,
+      "travel_time_min": 97.0,
+      "runtime_ms": 1054.268
+    },
+    {
+      "population_particles": 50,
+      "iteration_budget": 50,
+      "is_feasible": true,
+      "cost": 74.513,
+      "travel_time_min": 97.0,
+      "runtime_ms": 1747.637
+    },
+    {
+      "population_particles": 50,
+      "iteration_budget": 100,
+      "is_feasible": true,
+      "cost": 71.257,
+      "travel_time_min": 94.38,
+      "runtime_ms": 3655.256
+    }
+  ],
+  "memetic_vs_qpso_summary": [
+    {
+      "num_customers": 8,
+      "num_vehicles": 2,
+      "num_trials": 10,
+      "paired_feasible_trials": 4,
+      "qpso_mean_cost_paired": 33.2527,
+      "qpso_std_cost_paired": 1.0622,
+      "memetic_mean_cost_paired": 33.2527,
+      "memetic_std_cost_paired": 1.0622,
+      "mean_improvement_pct_vs_qpso": 0.0,
+      "wins_count": 0,
+      "losses_count": 0,
+      "ties_count": 4,
+      "qpso_mean_time_min": 160.15,
+      "memetic_mean_time_min": 156.49,
+      "qpso_mean_runtime_ms": 132.58,
+      "memetic_mean_runtime_ms": 336.84,
+      "memetic_vs_qpso_runtime_ratio": 2.54,
+      "qpso_feasibility_pct": 40.0,
+      "memetic_feasibility_pct": 40.0
+    },
+    {
+      "num_customers": 12,
+      "num_vehicles": 3,
+      "num_trials": 10,
+      "paired_feasible_trials": 6,
+      "qpso_mean_cost_paired": 52.8123,
+      "qpso_std_cost_paired": 4.8557,
+      "memetic_mean_cost_paired": 51.6368,
+      "memetic_std_cost_paired": 2.7794,
+      "mean_improvement_pct_vs_qpso": 1.75,
+      "wins_count": 4,
+      "losses_count": 2,
+      "ties_count": 0,
+      "qpso_mean_time_min": 227.52,
+      "memetic_mean_time_min": 212.41,
+      "qpso_mean_runtime_ms": 229.26,
+      "memetic_mean_runtime_ms": 904.69,
+      "memetic_vs_qpso_runtime_ratio": 3.95,
+      "qpso_feasibility_pct": 60.0,
+      "memetic_feasibility_pct": 60.0
+    },
+    {
+      "num_customers": 16,
+      "num_vehicles": 4,
+      "num_trials": 10,
+      "paired_feasible_trials": 2,
+      "qpso_mean_cost_paired": 81.763,
+      "qpso_std_cost_paired": 6.231,
+      "memetic_mean_cost_paired": 68.7195,
+      "memetic_std_cost_paired": 6.0745,
+      "mean_improvement_pct_vs_qpso": 14.89,
+      "wins_count": 2,
+      "losses_count": 0,
+      "ties_count": 0,
+      "qpso_mean_time_min": 300.26,
+      "memetic_mean_time_min": 301.01,
+      "qpso_mean_runtime_ms": 288.28,
+      "memetic_mean_runtime_ms": 1843.63,
+      "memetic_vs_qpso_runtime_ratio": 6.4,
+      "qpso_feasibility_pct": 20.0,
+      "memetic_feasibility_pct": 20.0
+    }
+  ],
+  "memetic_hybrid_aggregate": {
+    "config": {
+      "network": "Synthetic 50-node grid (Visakhapatnam-centered)",
+      "scales": [
+        8,
+        12,
+        16
+      ],
+      "seeds": [
+        42,
+        101,
+        7,
+        23,
+        88,
+        12,
+        99,
+        54,
+        31,
+        77
+      ],
+      "particles": 20,
+      "max_iterations": 30,
+      "beta": [
+        1.0,
+        0.5
+      ],
+      "local_search": {
+        "moves": [
+          "2-opt (contiguous reversal)",
+          "relocate (single customer move)"
+        ],
+        "improvement_mode": "best",
+        "ls_rounds_per_iteration": 2,
+        "feedback": "Improved gbest ordering re-encoded into swarm attractor"
+      }
+    },
+    "aggregate_mean_improvement_pct_vs_qpso": 3.36,
+    "aggregate_median_improvement_pct": 0.2,
+    "total_paired_trials": 12,
+    "timestamp": "2026-09-05T08:08:46.035912+00:00",
+    "interpretation": "Positive improvement pct means the memetic hybrid achieves LOWER normalized fleet cost than vanilla QPSO on the same instance; runtime ratio shows the intensification cost."
+  },
+  "search_configuration": {
+    "point_to_point_qpso": {
+      "particles": 20,
+      "max_iterations": 30,
+      "beta": "1.0 -> 0.5"
+    },
+    "vrp_qpso": {
+      "particles": 25,
+      "max_iterations": 50,
+      "beta": "1.0 -> 0.5"
+    },
+    "memetic_qpso": {
+      "particles": 20,
+      "max_iterations": 30,
+      "beta": "1.0 -> 0.5",
+      "local_search": "2-opt + relocate, best-improvement"
+    },
+    "evaluated_seeds": [
+      42,
+      101,
+      7,
+      23,
+      88,
+      12,
+      99,
+      54,
+      31,
+      77
+    ]
+  },
+  "provenance_statement": "Comprehensive empirical scientific validation framework evaluated across 10 deterministic random seeds with exact exhaustive references, paired VRP statistical analysis, dual-corridor dynamic traffic reoptimization, single-seed parameter sensitivity analysis, and paired vanilla-vs-memetic hybrid QPSO benchmarking."
+}

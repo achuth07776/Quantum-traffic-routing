@@ -1,0 +1,4 @@
+problem_size,exact_optimal_cost,exact_travel_time_min,greedy_mean_cost,greedy_mean_gap_pct,greedy_mean_runtime_ms,qpso_mean_cost,qpso_mean_gap_pct,qpso_mean_runtime_ms,qpso_feasibility_pct,num_trials
+4,18.524,62.98,19.704,6.37,1.56,18.524,0.0,277.07,100.0,10
+5,27.806,84.66,28.986,4.24,1.94,27.806,0.0,180.15,100.0,10
+6,43.458,115.93,44.638,2.72,3.12,43.458,0.0,203.52,100.0,10

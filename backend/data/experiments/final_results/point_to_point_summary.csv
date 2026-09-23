@@ -1,0 +1,6 @@
+graph_nodes,graph_edges,dijkstra_runtime_ms,dijkstra_cost,astar_runtime_ms,astar_time_min,qpso_runtime_ms,qpso_cost,qpso_feasible,status_note
+15,40,0.164,8.623,0.131,10.93,119.561,8.623,True,FEASIBLE
+50,182,0.41,11.7,0.325,15.79,235.272,12.135,True,FEASIBLE
+100,356,1.386,27.083,1.211,34.18,502.938,33.248,True,FEASIBLE
+250,936,3.493,32.735,4.237,43.26,433.386,38.457,True,FEASIBLE
+500,1860,18.722,50.979,12.487,67.57,526.501,Infinity,False,INFEASIBLE (20p x 30i Limit)

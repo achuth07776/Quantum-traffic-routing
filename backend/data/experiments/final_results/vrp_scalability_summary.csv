@@ -1,0 +1,4 @@
+num_customers,num_vehicles,greedy_mean_cost_all_trials,greedy_mean_cost_paired_subset,greedy_mean_time_all_trials,greedy_mean_runtime_ms,qpso_mean_cost_feasible_subset,qpso_std_cost_feasible_subset,qpso_mean_time_feasible_subset,qpso_mean_runtime_ms,mean_paired_cost_delta_pct,mean_paired_time_delta_pct,runtime_ratio,feasibility_rate_pct,num_trials,status_note
+8,2,33.128,35.421,142.86,14.27,33.253,1.062,150.45,230.16,5.86,8.17,16.1,40.0,10,BUDGET LIMITED (40.0% feasible)
+12,3,46.836,50.699,206.56,23.79,52.783,4.083,216.61,240.43,-4.66,3.95,10.1,60.0,10,BUDGET LIMITED (60.0% feasible)
+16,4,68.672,72.621,282.09,47.09,73.824,1.435,311.03,328.02,-1.66,3.88,7.0,20.0,10,BUDGET LIMITED (20.0% feasible)
