@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-04T11:36:50.143530+00:00",
+    "scope": "Visakhapatnam Metropolitan Road Network",
+    "independent_navigation_reference": "Independent navigation reference (Google Maps)",
+    "methodology": "Strict segment-level TomTom traffic flow spatial matching on OSRM road geometry",
+    "sample_count": 4
+  },
+  "uncombined_performance_metrics": {
+    "distance_mae_km": 0.29,
+    "distance_mape_pct": 1.54,
+    "eta_mae_min": 13.4,
+    "eta_mape_pct": 34.43,
+    "speed_mae_kmh": 15.05,
+    "speed_mape_pct": 51.92,
+    "mean_traffic_route_length_coverage_pct": 23.1,
+    "step_distance_conservation_error_m": 0.0,
+    "step_duration_conservation_error_s": 0.0,
+    "vrp_feasibility_rate_pct": 100.0,
+    "qpso_reproducibility_pct": 100.0
+  },
+  "corridor_observations": [
+    {
+      "corridor_id": "pendurthi_rk_beach",
+      "corridor_name": "Pendurthi -> RK Beach",
+      "timestamp": "2026-09-04T11:36:50.143530+00:00",
+      "system": {
+        "distance_km": 20.74,
+        "free_flow_duration_min": 22.7,
+        "traffic_delay_min": 5.0,
+        "traffic_duration_min": 27.7,
+        "speed_kmh": 44.9,
+        "traffic_state": "PARTIAL",
+        "traffic_coverage_pct": 22.5,
+        "matched_length_km": 4.66,
+        "route_length_km": 20.75,
+        "matched_segments": 172,
+        "unmatched_segments": 411,
+        "speed_sanity": "VALID",
+        "step_dist_diff_m": 0.2,
+        "step_dur_diff_s": 0.0,
+        "why_this_route": "Base duration: 22.7 min | Traffic delay: +5.0 min | Traffic-adjusted ETA: 27.7 min (22.5% coverage via TomTom Flow)"
+      },
+      "independent_reference": {
+        "source": "Independent navigation reference (Google Maps urban baseline)",
+        "distance_km": 21.2,
+        "duration_min": 45.0,
+        "speed_kmh": 28.3
+      },
+      "metrics": {
+        "distance_abs_error_km": 0.46,
+        "distance_pct_error": 2.17,
+        "eta_abs_error_min": 17.3,
+        "eta_pct_error": 38.44,
+        "speed_abs_error_kmh": 16.6,
+        "speed_pct_error": 58.66
+      }
+    },
+    {
+      "corridor_id": "pendurthi_rushikonda",
+      "corridor_name": "Pendurthi -> Rushikonda Beach",
+      "timestamp": "2026-09-04T11:36:50.143530+00:00",
+      "system": {
+        "distance_km": 24.82,
+        "free_flow_duration_min": 26.9,
+        "traffic_delay_min": 5.2,
+        "traffic_duration_min": 32.1,
+        "speed_kmh": 46.4,
+        "traffic_state": "PARTIAL",
+        "traffic_coverage_pct": 26.8,
+        "matched_length_km": 6.64,
+        "route_length_km": 24.83,
+        "matched_segments": 203,
+        "unmatched_segments": 433,
+        "speed_sanity": "VALID",
+        "step_dist_diff_m": 0.2,
+        "step_dur_diff_s": 0.0,
+        "why_this_route": "Base duration: 26.9 min | Traffic delay: +5.2 min | Traffic-adjusted ETA: 32.1 min (26.8% coverage via TomTom Flow)"
+      },
+      "independent_reference": {
+        "source": "Independent navigation reference (Google Maps urban baseline)",
+        "distance_km": 24.8,
+        "duration_min": 42.0,
+        "speed_kmh": 35.4
+      },
+      "metrics": {
+        "distance_abs_error_km": 0.02,
+        "distance_pct_error": 0.08,
+        "eta_abs_error_min": 9.9,
+        "eta_pct_error": 23.57,
+        "speed_abs_error_kmh": 11.0,
+        "speed_pct_error": 31.07
+      }
+    },
+    {
+      "corridor_id": "gajuwaka_rk_beach",
+      "corridor_name": "Gajuwaka Junction -> RK Beach",
+      "timestamp": "2026-09-04T11:36:50.143530+00:00",
+      "system": {
+        "distance_km": 16.9,
+        "free_flow_duration_min": 21.2,
+        "traffic_delay_min": 2.9,
+        "traffic_duration_min": 24.2,
+        "speed_kmh": 42.0,
+        "traffic_state": "PARTIAL",
+        "traffic_coverage_pct": 24.1,
+        "matched_length_km": 4.07,
+        "route_length_km": 16.9,
+        "matched_segments": 157,
+        "unmatched_segments": 327,
+        "speed_sanity": "VALID",
+        "step_dist_diff_m": 0.0,
+        "step_dur_diff_s": 0.0,
+        "why_this_route": "Base duration: 21.2 min | Traffic delay: +2.9 min | Traffic-adjusted ETA: 24.2 min (24.1% coverage via TomTom Flow)"
+      },
+      "independent_reference": {
+        "source": "Independent navigation reference (Google Maps urban baseline)",
+        "distance_km": 17.5,
+        "duration_min": 38.0,
+        "speed_kmh": 27.6
+      },
+      "metrics": {
+        "distance_abs_error_km": 0.6,
+        "distance_pct_error": 3.43,
+        "eta_abs_error_min": 13.8,
+        "eta_pct_error": 36.32,
+        "speed_abs_error_kmh": 14.4,
+        "speed_pct_error": 52.17
+      }
+    },
+    {
+      "corridor_id": "mvp_colony_nad_junction",
+      "corridor_name": "MVP Colony -> NAD Junction",
+      "timestamp": "2026-09-04T11:36:50.143530+00:00",
+      "system": {
+        "distance_km": 14.87,
+        "free_flow_duration_min": 16.8,
+        "traffic_delay_min": 2.6,
+        "traffic_duration_min": 19.4,
+        "speed_kmh": 46.0,
+        "traffic_state": "PARTIAL",
+        "traffic_coverage_pct": 19.0,
+        "matched_length_km": 2.82,
+        "route_length_km": 14.86,
+        "matched_segments": 103,
+        "unmatched_segments": 289,
+        "speed_sanity": "VALID",
+        "step_dist_diff_m": 0.0,
+        "step_dur_diff_s": 0.0,
+        "why_this_route": "Base duration: 16.8 min | Traffic delay: +2.6 min | Traffic-adjusted ETA: 19.4 min (19.0% coverage via TomTom Flow)"
+      },
+      "independent_reference": {
+        "source": "Independent navigation reference (Google Maps urban baseline)",
+        "distance_km": 14.8,
+        "duration_min": 32.0,
+        "speed_kmh": 27.75
+      },
+      "metrics": {
+        "distance_abs_error_km": 0.07,
+        "distance_pct_error": 0.47,
+        "eta_abs_error_min": 12.6,
+        "eta_pct_error": 39.38,
+        "speed_abs_error_kmh": 18.2,
+        "speed_pct_error": 65.77
+      }
+    }
+  ]
+}
