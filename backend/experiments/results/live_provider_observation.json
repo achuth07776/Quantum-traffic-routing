@@ -1,0 +1,34 @@
+{
+  "artifact_type": "SIMULATED_PROVIDER_OBSERVATION_RECORD",
+  "provenance_classification": "EXAMPLE (SIMULATED STATIC FIXTURE - NOT LIVE PROVIDER DATA)",
+  "provider_metadata": {
+    "provider_name": "STATIC EXAMPLE FIXTURE (no live provider)",
+    "api_version": "N/A",
+    "endpoint": "N/A (static example record, not fetched from any provider)",
+    "query_bounding_box": [83.10, 17.60, 83.45, 17.90],
+    "location_referencing": "shape / GeoJSON LineString"
+  },
+  "provider_returned_observation": {
+    "description": "Beach Rd, Visakhapatnam, Andhra Pradesh",
+    "speed_kmh": 16.0,
+    "free_flow_speed_kmh": 50.0,
+    "jam_factor": 7.8,
+    "confidence": 0.95,
+    "observed_at": "2026-09-04T01:00:00Z"
+  },
+  "internal_mapping_and_fusion": {
+    "internal_segment_reference": "visakhapatnam_beach_road_corridor",
+    "mapped_canonical_corridor_id": "beach_road",
+    "spatial_match_distance_m": 12.4,
+    "speed_ratio_r": 0.32,
+    "corridor_length_km": 10.57,
+    "computed_delay_formula": "T_e = (L_e / v_obs) * 60",
+    "free_flow_segment_time_min": 10.9,
+    "traffic_adjusted_segment_time_min": 34.5,
+    "matrix_impact": "Segment delay of +23.6 min added to routing matrix for pairs crossing the Beach Road corridor."
+  },
+  "data_integrity_notes": {
+    "raw_vs_internal_separation": "Verified. Fixture observation fields (speed, free_flow, jam_factor) are isolated from internal system-assigned identifiers (internal_segment_reference, canonical_corridor_id).",
+    "ground_truth_claim": "None. This is a static SIMULATED/EXAMPLE fixture, not live provider data, and is not attributed to any external traffic provider."
+  }
+}
