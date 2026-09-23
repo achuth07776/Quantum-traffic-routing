@@ -1,0 +1,102 @@
+{
+  "experiment": "Phase E7 Reproducible Traffic Reoptimization",
+  "generated_at": "2026-09-03T19:25:47.061831+00:00",
+  "causal_attribution_statement": "Because the optimizer configuration, seed, problem definition and search budget were held constant while the traffic cost surface was changed, the observed difference in the QPSO solution is attributable to the changed optimization landscape within this controlled experiment.",
+  "monotonicity_statement": "For this controlled experiment, the fixed-scale objective increased from the baseline to the reoptimized and inaction states.",
+  "decision_explanation": "The optimizer trades +4.87 km of additional road distance to achieve a 7.73-minute (11.3%) congestion-delay reduction relative to inaction.",
+  "fixed_reference_scales": {
+    "t_ref_min": 11.96,
+    "d_ref_km": 11.49
+  },
+  "telemetry_ms": {
+    "matrix_t0_ms": 694.78,
+    "solve_t0_ms": 1082.39,
+    "matrix_t1_ms": 0.06,
+    "eval_old_plan_ms": 0.03,
+    "solve_t1_ms": 1073.04
+  },
+  "records": [
+    {
+      "Condition": "T0 Baseline (Free Flow)",
+      "Solver": "Google OR-Tools (1s Guided Local Search)",
+      "Plan": "maddilapalem -> rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction -> maddilapalem",
+      "Fleet_Time_min": 51.23,
+      "Fleet_Dist_km": 47.82,
+      "Composite_J": 4.247,
+      "Feasible": "YES",
+      "Delay_Avoided": "N/A (Baseline)"
+    },
+    {
+      "Condition": "T0 Baseline (Free Flow)",
+      "Solver": "Random-Key QPSO (Seed 42, P=40, I=50)",
+      "Plan": "maddilapalem -> rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction -> maddilapalem",
+      "Fleet_Time_min": 51.23,
+      "Fleet_Dist_km": 47.82,
+      "Composite_J": 4.247,
+      "Feasible": "YES",
+      "Delay_Avoided": "N/A (Baseline)"
+    },
+    {
+      "Condition": "T1 Shock (Inaction: Pre-Shock Plan)",
+      "Solver": "OR-Tools Pre-Shock Route on Shocked Traffic",
+      "Plan": "maddilapalem -> rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction -> maddilapalem",
+      "Fleet_Time_min": 68.49,
+      "Fleet_Dist_km": 47.82,
+      "Composite_J": 5.2572,
+      "Feasible": "YES",
+      "Delay_Avoided": "0.0 min (Caught in delay)"
+    },
+    {
+      "Condition": "T1 Shock (Inaction: Pre-Shock Plan)",
+      "Solver": "QPSO Pre-Shock Route on Shocked Traffic",
+      "Plan": "maddilapalem -> rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction -> maddilapalem",
+      "Fleet_Time_min": 68.49,
+      "Fleet_Dist_km": 47.82,
+      "Composite_J": 5.2572,
+      "Feasible": "YES",
+      "Delay_Avoided": "0.0 min (Caught in delay)"
+    },
+    {
+      "Condition": "T1 Shock (Reoptimized)",
+      "Solver": "Google OR-Tools Reoptimized",
+      "Plan": "maddilapalem -> rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill -> maddilapalem",
+      "Fleet_Time_min": 60.76,
+      "Fleet_Dist_km": 52.69,
+      "Composite_J": 4.9319,
+      "Feasible": "YES",
+      "Delay_Avoided": "7.73 min avoided (+4.87 km)"
+    },
+    {
+      "Condition": "T1 Shock (Reoptimized)",
+      "Solver": "Random-Key QPSO Reoptimized (Seed 42)",
+      "Plan": "maddilapalem -> rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill -> maddilapalem",
+      "Fleet_Time_min": 60.76,
+      "Fleet_Dist_km": 52.69,
+      "Composite_J": 4.9319,
+      "Feasible": "YES",
+      "Delay_Avoided": "7.73 min avoided (+4.87 km)"
+    }
+  ],
+  "four_quadrant_matrix": [
+    {
+      "State": "1. T0 Baseline Plan",
+      "Google OR-Tools (1s Guided Local Search)": "J=4.2470 | T=51.23m | D=47.82km",
+      "Random-Key QPSO (Seed 42, P=40, I=50)": "J=4.2470 | T=51.23m | D=47.82km"
+    },
+    {
+      "State": "2. T0 Plan Evaluated Under T1 (Inaction)",
+      "Google OR-Tools (1s Guided Local Search)": "J=5.2572 | T=68.49m | D=47.82km",
+      "Random-Key QPSO (Seed 42, P=40, I=50)": "J=5.2572 | T=68.49m | D=47.82km"
+    },
+    {
+      "State": "3. Reoptimized Under T1 Traffic",
+      "Google OR-Tools (1s Guided Local Search)": "J=4.9319 | T=60.76m | D=52.69km",
+      "Random-Key QPSO (Seed 42, P=40, I=50)": "J=4.9319 | T=60.76m | D=52.69km"
+    },
+    {
+      "State": "4. Operational Value (Avoided Cost)",
+      "Google OR-Tools (1s Guided Local Search)": "Delta_T=-7.73m (11.3%) | Delta_D=+4.87km | Delta_J=-0.3253",
+      "Random-Key QPSO (Seed 42, P=40, I=50)": "Delta_T=-7.73m (11.3%) | Delta_D=+4.87km | Delta_J=-0.3253"
+    }
+  ]
+}

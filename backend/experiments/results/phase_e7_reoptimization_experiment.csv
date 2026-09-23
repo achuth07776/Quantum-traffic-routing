@@ -1,0 +1,7 @@
+Condition,Solver,Plan,Fleet_Time_min,Fleet_Dist_km,Composite_J,Feasible,Delay_Avoided
+T0 Baseline (Free Flow),Google OR-Tools (1s Guided Local Search),maddilapalem -> rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction -> maddilapalem,51.23,47.82,4.247,YES,N/A (Baseline)
+T0 Baseline (Free Flow),"Random-Key QPSO (Seed 42, P=40, I=50)",maddilapalem -> rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction -> maddilapalem,51.23,47.82,4.247,YES,N/A (Baseline)
+T1 Shock (Inaction: Pre-Shock Plan),OR-Tools Pre-Shock Route on Shocked Traffic,maddilapalem -> rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction -> maddilapalem,68.49,47.82,5.2572,YES,0.0 min (Caught in delay)
+T1 Shock (Inaction: Pre-Shock Plan),QPSO Pre-Shock Route on Shocked Traffic,maddilapalem -> rushikonda_beach -> kailasagiri_hill -> rk_beach -> nad_junction -> maddilapalem,68.49,47.82,5.2572,YES,0.0 min (Caught in delay)
+T1 Shock (Reoptimized),Google OR-Tools Reoptimized,maddilapalem -> rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill -> maddilapalem,60.76,52.69,4.9319,YES,7.73 min avoided (+4.87 km)
+T1 Shock (Reoptimized),Random-Key QPSO Reoptimized (Seed 42),maddilapalem -> rk_beach -> nad_junction -> rushikonda_beach -> kailasagiri_hill -> maddilapalem,60.76,52.69,4.9319,YES,7.73 min avoided (+4.87 km)
