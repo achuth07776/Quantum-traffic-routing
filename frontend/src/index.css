@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Leaflet Light Map Styling (Google Maps / CartoDB Positron style) */
+.leaflet-container {
+  background: #f1f5f9 !important;
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-tile {
+  filter: contrast(1.05) saturate(1.05);
+}
+
+.custom-node-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-node-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Custom scrollbar for light theme panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
